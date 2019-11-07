@@ -3,8 +3,10 @@ package digilocker.demo
 import Student.GenerateStudentCompositeAdminService
 
 class AdminController {
-
+    def springSecurityService
     def index() {
+        def user = springSecurityService.currentUser
+        println(user)
     redirect (action : 'Dashboard')}
 def Dashboard(){
                
