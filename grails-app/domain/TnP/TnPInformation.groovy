@@ -16,4 +16,5 @@ class TnPInformation {
          email email: true, blank: false
          name nullable: false, blank: false
     }
+  
 }

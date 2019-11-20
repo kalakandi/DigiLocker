@@ -269,7 +269,7 @@ response.setHeader("Pragma","no-cache");
                                     <div class="col-sm-5 offset-sm-1">
                                         <div class="form-group label-floating">
                                             <label class="form-control-label">X<sup>th</sup> Percentage </label>
-                                            <input name="xPercent" type="text" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                                            <input name="xPercent" type="text" class="form-control" value="${tenthScore?.xPercent}" onkeypress='return event.charCode >= 48 && event.charCode <= 57'disabled/>
                                         </div>
                                     </div>
                                 </div>
@@ -320,7 +320,7 @@ response.setHeader("Pragma","no-cache");
                                     <div class="col-sm-5 offset-sm-1">
                                         <div class="form-group label-floating">
                                             <label class="form-control-label">XII<sup>th</sup> Percentage </label>
-                                            <input name="xiiPercent" name="xiiPercent" type="text" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                                            <input name="xiiPercent" name="xiiPercent" type="text" class="form-control" value="${twelveScore?.xiiPercentage}" onkeypress='return event.charCode >= 48 && event.charCode <= 57' disabled/>
                                         </div>
                                     </div>
                                 </div>

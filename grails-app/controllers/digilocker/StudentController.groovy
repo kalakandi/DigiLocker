@@ -11,6 +11,7 @@ class StudentController {
     redirect (action : 'Dashboard')
 }
 def Dashboard(){
+               
     }
     
 def studentDetailsForm(){
@@ -31,12 +32,11 @@ def logout(){
 }
 def login() {
 }
-
+def studentNavbar() {
+    
+}
 def save(){
     render params;
     redirect (action : 'Dashboard')
-}
-def studentFormView(){
-    
 }
 }

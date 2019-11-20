@@ -16,11 +16,12 @@ class CertificateController {
     {
         //in params always provide the rollno field first.
         //def params =['rollNo':'1703010225', 'status':'intracollege', 'category':'cultural', 'event':'skit', 'winner':'0', 'participant':'2', 'member':'team 1']
-    
-       GenerateStudentCoCurriculumService generateStudentCoCurriculum=new  GenerateStudentCoCurriculumService();
+    render params;
+       //GenerateStudentCoCurriculumService generateStudentCoCurriculum=new  GenerateStudentCoCurriculumService();
                
-       render generateStudentCoCurriculum.generateStudentCoCurriculum(params);
+       //render generateStudentCoCurriculum.generateStudentCoCurriculum(params);
         //render ob.fun(param);
+       // def temporary =new StudentCoCurriculum
     }
     def saveTrainingAndInternship()
     {

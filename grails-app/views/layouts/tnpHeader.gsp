@@ -85,7 +85,7 @@
                     </div>
                     <div class="col-lg-3 clearfix">
                         <div class="pull-right">
-                            <g:form method="post" controller="logout" useToken="true"><button type="submit" class="btn btn-sm btn-link"><i class="fa fa-sign-out fa-lg"></i> Logout</button></g:form>
+                            <a href="/"> <i class="fa fa-sign-out fa-lg"></i>Logout </a>
                     </div>
                     </div>
                     

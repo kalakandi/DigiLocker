@@ -61,8 +61,8 @@ function Upload() {
         var row = table.insertRow(-1);
  
         //Add the header cells.
-     var headerCell = document.createElement("TH");
-        headerCell.innerHTML = "Teacher ID";
+        var headerCell = document.createElement("TH");
+        headerCell.innerHTML = "Roll No";
         row.appendChild(headerCell);
  
         headerCell = document.createElement("TH");
@@ -110,9 +110,9 @@ function Upload() {
             
                     var editableField = document.createElement("input")
                     editableField.type="text"
-                    editableField.name="teacherID"
+                    editableField.name="rollNo"
                     editableField.classList.add("form-control");
-                    editableField.value= excelRows[i].teacherID;
+                    editableField.value= excelRows[i].rollNo;
                     editableField.readOnly="readOnly"
                     cell.append(editableField)
             
@@ -192,7 +192,7 @@ function Upload() {
                     editableField.readOnly="readOnly"
                     cell.append(editableField)
         }
-          var dvExcel = document.getElementById("dvExcel");
+        var dvExcel = document.getElementById("dvExcel");
        
         dvExcel.innerHTML = "";
         

@@ -1,9 +1,9 @@
-package digilocker
+package DigilockerSecurity.demo
 
 class TnPController {
 
     def index() {
-     redirect (action : 'Dashboard')
+        redirect (action : 'Dashboard')
     }
     def Dashboard(){
                
@@ -23,6 +23,9 @@ class TnPController {
     }
     def search_form(){
         
+    }
+      def temporary(){
+        render(params)
     }
     
 def testView(){

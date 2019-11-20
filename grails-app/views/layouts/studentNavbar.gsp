@@ -27,7 +27,7 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-12">
-                            <form method="POST" id="coCurriculumForm" enctype="multipart/form-data">
+                            <g:form controller="Certificate" action ="saveCoCurriculum" method="POST" id="coCurriculumForm" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <input name="rollNo" class="form-control" id="rollNo"  type="hidden">
                                 </div>
@@ -136,7 +136,7 @@
                                 <input type="submit" class="btn btn-success pull-right" value="Upload">
                                
 
-                            </form>
+                            </g:form>
                         </div>
                     </div>
 

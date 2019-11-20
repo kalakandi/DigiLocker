@@ -221,7 +221,7 @@ response.setHeader("Pragma","no-cache");
                             <div class="col-sm-5 offset-sm-1">
                                 <div class="form-group label-floating">
                                     <label class="form-control-label"> X<sup>th</sup> Percentage </label>
-                                    <span class="form-control" disabled> 85 <span class="append"> %</span></span>
+                                    <span class="form-control" disabled> 85<span class="append"> %</span></span>
                                 </div>
                             </div>
                             <div class="col-sm-5">
@@ -235,7 +235,7 @@ response.setHeader("Pragma","no-cache");
                             <div class="col-sm-5 offset-sm-1">
                                 <div class="form-group label-floating">
                                     <label class="form-control-label"> B. Tech. Percentage </label>
-                                    <span class="form-control" disabled> 75 <span class="append"> %</span></span>
+                                    <span class="form-control" disabled>75 <span class="append"> %</span></span>
                                 </div>
                             </div>
 
