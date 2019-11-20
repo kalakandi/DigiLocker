@@ -62,7 +62,7 @@
 }
 
 .horizontal-main-wrapper {
-    min-height: 20vh;
+    min-height: 5vh;
 }
 
 .horizontal-main-wrapper .container {
@@ -484,6 +484,7 @@ ul.breadcrumbs {
 .notification-area .dropdown-toggle,
 .user-name.dropdown-toggle {
     position: relative;
+    margin-top: 3;
 }
 
 .notification-area .dropdown-toggle:after,

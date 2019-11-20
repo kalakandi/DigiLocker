@@ -52,88 +52,95 @@ response.setHeader("Pragma","no-cache");
     <div class="main-content-inner">
         <div class="wizard-container">
             <div class="row justify-content-center">
-                
-            <div class="card wizard-card">
-                <div class="row justify-content-center">
+
+                <div class="card wizard-card">
+                    <div class="row justify-content-center">
                         <h3 class="wizard-header col-10" id="gradientBox">
                             <center>Upload Students File</center>
                         </h3>
-                            <div class="col-11">
-                                <div class="offset-2 pull-left">
-                                        <input type="file" class="btn btn-warning" id="fileUpload" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"/>
-                                        <input type="button" class="btn btn-success upload" id="upload" value="Upload" onclick="Upload()" />
-                                    </div>
-                                <div class="pull-right">
-                                            <a href="javascript:void(0);" onclick="exportTableToExcel('tblData')">
-                                                <i class="fa fa-lg fa-cogs pull-right"> Sample Excel File</i>
-                                            </a>
-                                    
-                                </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-11">
+                            <div class="offset-2 pull-left">
+                                <input type="file" class="btn btn-warning" id="fileUpload" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"/>
+                                <input type="button" class="btn btn-success upload" id="upload" value="Upload" onclick="Upload()" />
                             </div>
-  
-                                <g:form contoller="Admin" action="submitStudentBasicInformation">
-                                    <div id="dvExcel" class="table table-striped form-group">                     
+                            <div class="pull-right mt-4 mr-3">
+                                <a href="javascript:void(0);" onclick="exportTableToExcel('tblData')">
+                                    <i class="fa fa-lg fa-cogs pull-right"> Download Sample .xls File</i>
+                                </a>
 
-
-                                    </div>  
-                                    <div id="dvButton">                     
-                                        <input type ="submit" name="submit" value="submit" class="btn btn-success"/>
-                                    </div>
-                                </g:form>
-                            </div>    
-
+                            </div>
                         </div>
-
                     </div>
 
-                </div>
+                    <g:form contoller="Admin" action="submitStudentBasicInformation">
+                        <div class="row justify-content-center">
+                            <div class="col-11">
+                                <div id="dvExcel" class="table table-responsive table-striped form-group">                     
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="dvButton" class="col-10 offset-1">                     
+                                <input type ="submit" name="submit" value="submit" class="btn btn-success pull-right"/>
+                            </div>
+                        </div>
+                    </g:form>
+                </div>    
+
             </div>
 
-<!-- Textual inputs end -->
-            <table id="tblData">
-                <tr>
-                    <th>rollNo</th>
-                    <th>firstName</th>
-                    <th>lastName</th>
-                    <th>dateOfBirth</th>
-                    <th>contactNo</th>
-                    <th>email</th>
-                    <th>branch</th>
-                    <th>joiningYear</th>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
-       
-            <!-- main content area end -->
-           <!-- footer area start-->
-        <div class="footer">
-            <div class="container text-center">
-                e-IPEC DigiLocker
-            </div>
         </div>
-        <!-- footer area end-->
-        <!-- jquery latest version -->
-        <asset:javascript src="jquery-2.2.4.min.js"/>
-        <!-- bootstrap 4 js -->
-        <asset:javascript src="popper.min.js"/>
-        <asset:javascript src="bootstrap.min.js"/>
-        <asset:javascript src="jquery.slimscroll.min.js"/>
-        <asset:javascript src="jquery.slicknav.min.js"/>
-        <asset:javascript src="metisMenu.min.js"/>
-        <asset:javascript src="jquery.dataTables.min.js"/>
-        <asset:javascript src="dataTables.bootstrap4.min.js.js"/>
-        <asset:javascript src="plugins.js"/>
-        <asset:javascript src="header.js"/>
-        <asset:javascript src="uploadStudentFile.js"/>
+
+    </div>
+</div>
+
+<!-- Textual inputs end -->
+<table id="tblData">
+    <tr>
+        <th>rollNo</th>
+        <th>firstName</th>
+        <th>lastName</th>
+        <th>dateOfBirth</th>
+        <th>contactNo</th>
+        <th>email</th>
+        <th>branch</th>
+        <th>joiningYear</th>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+     <!-- main content area end -->
+    <!-- footer area start-->
+<div class="footer">
+    <div class="container text-center">
+        e-IPEC DigiLocker
+    </div>
+</div>
+<!-- footer area end-->
+<!-- jquery latest version -->
+<asset:javascript src="jquery-2.2.4.min.js"/>
+<!-- bootstrap 4 js -->
+<asset:javascript src="popper.min.js"/>
+<asset:javascript src="bootstrap.min.js"/>
+<asset:javascript src="jquery.slimscroll.min.js"/>
+<asset:javascript src="jquery.slicknav.min.js"/>
+<asset:javascript src="metisMenu.min.js"/>
+<asset:javascript src="jquery.dataTables.min.js"/>
+<asset:javascript src="dataTables.bootstrap4.min.js.js"/>
+<asset:javascript src="plugins.js"/>
+<asset:javascript src="header.js"/>
+<asset:javascript src="uploadStudentFile.js"/>
 
 </body>
 

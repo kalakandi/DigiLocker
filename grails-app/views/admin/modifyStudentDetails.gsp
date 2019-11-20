@@ -133,10 +133,11 @@ response.setHeader("Pragma","no-cache");
                             <div class="wizard-header" id="gradientBox">
                                 <h3>Student Basic Information Table</h3>
                                 <hr/>
-                                Click Table Cell to Edit Data
                             </div>
                         </div>
                         <div class="row justify-content-center">
+                                 <h4 class="error">Click Table Cell to Edit Data</h4>
+                           
                             <div class="col-12">
                                 <g:form  controller="student" action="formvalue" id="modifyDataForm">
 

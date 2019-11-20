@@ -57,7 +57,7 @@
                                         <a href="javascript:void(0)"><i class="fa fa-folder"/></i><span>upload details</span></a>
                                         <ul class="submenu">
                                             <li class="nav"><a href="uploadStudentFile">Upload students file</a></li>
-                                            <li class="nav"><a href="#">Upload t&P cell file</a></li>
+                                            <li class="nav"><a href="uploadTnPfile">Upload t&P cell file</a></li>
                                             <li class="nav"><a href="#">Upload teachers file</a></li>
                                             <li class="nav"><a href="#">Upload h.O.D. file</a></li>
                                         </ul>
@@ -77,7 +77,8 @@
                     </div>
                     <div class="col-lg-3 clearfix">
                         <div class="pull-right">
-                            <a href="/"><i class="fa fa-sign-out fa-lg"></i>Logout </a>
+                            <g:form method="post" controller="logout" useToken="true"><button type="submit" class="btn btn-sm btn-link"><i class="fa fa-sign-out fa-lg"></i> Logout</button></g:form>
+                         
                     </div>
                     </div>
                     

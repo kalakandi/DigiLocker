@@ -10,9 +10,10 @@ class StudentController {
 
     def springSecurityService
     def index() { 
+       render ''
        def user = springSecurityService.currentUser
        def value=StudentBasicInformation.findByUser(user)
-       println(value.firstName)
+      // println(value.firstName)
     render view : 'Dashboard', model:[basicInfo:value]
 }
 def Dashboard(){
@@ -35,16 +36,9 @@ def formvalue(){
     new GenerateStudentExtendedInformationService().generateStudentExtendedInformation(currentUser,params);
     new GenerateStudentPermanentAddressService().generateStudentPermanentAddress(currentUser,params);
     
-    redirect(action: 'Dashboard')
+    redirect(action: 'index')
     }
-def logout(){
-    redirect (action : 'login')
-}
-def login() {
-}
-def studentNavbar() {
-    
-}
+
 def save(){
     render params;
     redirect (action : 'Dashboard')

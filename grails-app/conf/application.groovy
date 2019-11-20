@@ -1,9 +1,12 @@
 
 
 // Added by the Spring Security Core plugin:
+grails.plugin.springsecurity.useBasicAuth = true
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'DigilockerSecurity.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'DigilockerSecurity.UserRole'
 grails.plugin.springsecurity.authority.className = 'DigilockerSecurity.Role'
+grails.plugin.springsecurity.logout.postOnly = false
+
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	[pattern: '/',               access: ['permitAll']],
 	[pattern: '/error',          access: ['permitAll']],
@@ -15,9 +18,9 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	[pattern: '/**/css/**',      access: ['permitAll']],
 	[pattern: '/**/images/**',   access: ['permitAll']],
 	[pattern: '/**/favicon.ico', access: ['permitAll']],
-        [pattern: '/student/*', 	 access: ['ROLE_STUDENT']],
+        [pattern: '/student/*', 	 access: ['ROLE_STUDENT','ROLE_ADMIN']],
 	[pattern: '/admin/*', 		 access: ['ROLE_ADMIN']],
-        [pattern: '/tnp/*',             access: ['ROLE_TNP']]
+        [pattern: '/tnp/*',             access: ['ROLE_TNP','ROLE_ADMIN']]
 ]
 
 grails.plugin.springsecurity.filterChain.chainMap = [

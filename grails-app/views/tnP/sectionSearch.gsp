@@ -222,7 +222,7 @@ response.setHeader("Pragma","no-cache");
 <asset:javascript src="metisMenu.min.js"/>
 <asset:javascript src="plugins.js"/>
 <asset:javascript src="header.js"/>
-<asset:javascript src="studentSearch.js"/>
+<asset:javascript src="branchSearch.js"/>
 </body>
 
 </html>

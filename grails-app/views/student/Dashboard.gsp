@@ -51,7 +51,7 @@ response.setHeader("Pragma","no-cache");
  <!-- page title area end -->
     <div class="main-content-inner">
         <div class="just-middle">
-               <h2>Welcome to Dashboard ${name}</h2>
+            <h2>Welcome to Dashboard ${name}</h2>
         </div>
 
         <div class="wizard-container col-9">
@@ -64,10 +64,9 @@ response.setHeader("Pragma","no-cache");
     </div>    
 <!-- Textual inputs end -->
 
+<!-- main content area end -->
+<!-- footer area start-->
 
-    <!-- main content area end -->
-   <!-- footer area start-->
-    
     <div class="footer">
         <div class="container text-center">
             e-IPEC DigiLocker
@@ -87,7 +86,6 @@ response.setHeader("Pragma","no-cache");
 <asset:javascript src="scripts.js"/>
 <asset:javascript src="jquery.validate.min.js"/>
 <asset:javascript src="studentNavbar.js"/>
-
 
 </body>
 

@@ -112,10 +112,10 @@
                                         <li class="nav">
                                             <a href="javascript:void(0)"><i class="fa fa-folder"/></i><span>upload information</span></a>
                                             <ul class="submenu">
-                                                <li class="nav"><a href="javascript:void();">b. tech. mark sheet</a></li>
+                                                <li class="nav"><a href="javascript:void();"data-toggle="modal" data-target="#btechModal">b. tech. mark sheet</a></li>
                                                 <li class="nav"><a href="javascript:void();" data-toggle="modal" data-target="#coCurriculumModal">co curriculum certificates</a></li>
                                                 <li class="nav"><a href="javascript:void();" data-toggle="modal" data-target="#trainingInternshipModal">training & internship certificate</a></li>
-                                                <li class="nav"><a href="javascript:void();">placement details</a></li>
+                                                <li class="nav"><a href="studentFormView">placement details</a></li>
                                             </ul>
                                         </li>
                                         <li class="nav">
@@ -131,7 +131,7 @@
                         <!-- mobile_menu -->
                     <div class="col-lg-3 clearfix">
                         <div class="pull-right">
-                            <a href="/"> <i class="fa fa-sign-out fa-lg"></i>Logout </a>
+                            <g:form method="post" controller="logout" useToken="true"><button type="submit" class="btn btn-sm btn-link"><i class="fa fa-sign-out fa-lg"></i> Logout</button></g:form>
                     </div>
                     </div>
                     </div>
@@ -139,30 +139,13 @@
             </div>
             <!-- header area end -->                                
         </div>   
-         <div class="modal" id="bTechModal" role="dialog">
-             <div class="modal-dialog" role="document">
-                 <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Modal body text goes here.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  
-             </div>
-  
-             </div>
              
 <div>
-        <g:applyLayout name="studentNavbar">
+    <g:applyLayout name="coCurriculum">
+        </g:applyLayout>
+    <g:applyLayout name="bTechMarksheet">
+        </g:applyLayout>
+    <g:applyLayout name="trainingAndInternship">
         </g:applyLayout>
 </div>
     </body>

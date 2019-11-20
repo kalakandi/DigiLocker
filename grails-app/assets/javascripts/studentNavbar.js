@@ -48,15 +48,15 @@ function readTrainingInternshipCertificate() {
         }
     }
 }
-$("#btechMarksheet").change(function () {
-    readBtechMarksheet(this);
+$("#semesterMarksheet").change(function () {
+    readsemesterMarksheet(this);
 });
-function readBtechMarksheet() {
-    var fileInput = document.getElementById('btechMarksheet');
+function readsemesterMarksheet() {
+    var fileInput = document.getElementById('semesterMarksheet');
     var filePath = fileInput.value;
     var allowedExtensions = /(\.jpg|\.jpeg)/;
     if(!allowedExtensions.exec(filePath)){
-        alert('Please upload file having extensions .jpeg only.');
+        alert('Please upload file having extensions .jpg/.jpeg only.');
         fileInput.value = '';
         return false;
     }else{
@@ -64,14 +64,17 @@ function readBtechMarksheet() {
         if (fileInput.files && fileInput.files[0]) {
             var reader = new FileReader();
             reader.onload = function(e) {
-                $('#btechMarksheetPreview').attr('src', e.target.result).fadeIn('slow');
+                $('#semesterMarksheetPreview').attr('src', e.target.result).fadeIn('slow');
             },
             reader.readAsDataURL(fileInput.files[0]);
         }
     }
 }
 
-
+jQuery.validator.addMethod("digitsonly", function (value, element) {
+        return this.optional(element) || /^[0-9]+$/i.test(value);
+    }, "Digits only please");
+    
 jQuery.validator.addMethod("lettersonly", function (value, element) {
     return this.optional(element) || /^[a-z\s]+$/i.test(value);
 }, $.validator.messages.lettersonly = 'only alphabets are allowed');
@@ -95,241 +98,7 @@ $('[data-toggle="checkbox"]').click(function () {
     }
 });
 
-
-$('#btechMarksheetForm').validate({
-    rules: {
-        session: {
-            required: true,
-            digitsonly: true
-        },
-        branch: {
-            required: true
-        },
-        studentName: {
-            required: true,
-            minlength: 2,
-            lettersonly: true
-        },
-        year: {
-            required: true
-        },
-        rollNumber: {
-            required: true,
-            minlength: 9,
-            maxlength: 10,
-            digitsonly: true
-        },
-        companyName: {
-            required: true,
-            minlength: 3,
-            lettersonly: true
-        },
-        city: {
-            required: true,
-            minlength: 3,
-            lettersonly: true
-        },
-        projectTitle: {
-            required: true,
-            minlength: 3,
-            lettersonly: true
-        },
-        mentorName: {
-            required: true,
-            minlength: 3,
-            lettersonly: true
-        },
-        areaOfProject: {
-            required: true,
-            minlength: 3,
-            lettersonly: true
-        },
-        trainingInternshipCertificate: {
-            required: true,
-            filesize: 1048576
-        }
-
-    },
-    messages: {
-
-        session: {
-            required: "This field is Mandatory"
-        },
-        branch: {
-            required: "This field is Mandatory"
-        },
-        studentName: {
-            required: "This field is Mandatory",
-            minlength: "Please enter a valid value",
-            lettersonly: "Only Alphabets Allowed"
-        },
-        year: {
-            required: "This field is Mandatory"
-        },
-        rollNumber: {
-            required: "This field is Mandatory",
-            minlength: "Please enter a valid value",
-            maxlength: "Please enter a valid value",
-            digitsonly: "Only Numbers Allowed"
-        },
-        companyName: {
-            required: "This field is Mandatory",
-            minlength: 3,
-            lettersonly: "Only Alphabets Allowed"
-        },
-        city: {
-            required: "This field is Mandatory",
-            minlength: "Please enter a valid value",
-            lettersonly: "Only Alphabets Allowed"
-        },
-        projectTitle: {
-            required: "This field is Mandatory",
-            minlength: "Please enter a valid value",
-            lettersonly: "Only Alphabets Allowed"
-        },
-        mentorName: {
-            required: "This field is Mandatory",
-            minlength: "Please enter a valid value",
-            lettersonly: "Only Alphabets Allowed"
-        },
-        areaOfProject: {
-            required: "This field is Mandatory",
-            minlength: "Please enter a valid value",
-            lettersonly: "Only Alphabets Allowed"
-        },
-        trainingInternshipCertificate: {
-            required: "This field is Mandatory",
-            filesize: "Maximum file size is 1 MB"
-        }
-    },
-    highlight: function (element) {
-        $(element).parent().addClass('has-error');
-    },
-    unhighlight: function (element) {
-        $(element).parent().removeClass('has-error');
-    },
-    submitHandler: function (form) {
-        form.submit();
-    }
-});
-
-$('#trainingAndInternshipForm').validate({
-    rules: {
-        session: {
-            required: true,
-            digitsonly: true
-        },
-        branch: {
-            required: true
-        },
-        studentName: {
-            required: true,
-            minlength: 2,
-            lettersonly: true
-        },
-        year: {
-            required: true
-        },
-        rollNumber: {
-            required: true,
-            minlength: 9,
-            maxlength: 10,
-            digitsonly: true
-        },
-        companyName: {
-            required: true,
-            minlength: 3,
-            lettersonly: true
-        },
-        city: {
-            required: true,
-            minlength: 3,
-            lettersonly: true
-        },
-        projectTitle: {
-            required: true,
-            minlength: 3,
-            lettersonly: true
-        },
-        mentorName: {
-            required: true,
-            minlength: 3,
-            lettersonly: true
-        },
-        areaOfProject: {
-            required: true,
-            minlength: 3,
-            lettersonly: true
-        },
-        trainingInternshipCertificate: {
-            required: true,
-            filesize: 1048576
-        }
-
-    },
-    messages: {
-
-        session: {
-            required: "This field is Mandatory"
-        },
-        branch: {
-            required: "This field is Mandatory"
-        },
-        studentName: {
-            required: "This field is Mandatory",
-            minlength: "Please enter a valid value",
-            lettersonly: "Only Alphabets Allowed"
-        },
-        year: {
-            required: "This field is Mandatory"
-        },
-        rollNumber: {
-            required: "This field is Mandatory",
-            minlength: "Please enter a valid value",
-            maxlength: "Please enter a valid value",
-            digitsonly: "Only Numbers Allowed"
-        },
-        companyName: {
-            required: "This field is Mandatory",
-            minlength: 3,
-            lettersonly: "Only Alphabets Allowed"
-        },
-        city: {
-            required: "This field is Mandatory",
-            minlength: "Please enter a valid value",
-            lettersonly: "Only Alphabets Allowed"
-        },
-        projectTitle: {
-            required: "This field is Mandatory",
-            minlength: "Please enter a valid value",
-            lettersonly: "Only Alphabets Allowed"
-        },
-        mentorName: {
-            required: "This field is Mandatory",
-            minlength: "Please enter a valid value",
-            lettersonly: "Only Alphabets Allowed"
-        },
-        areaOfProject: {
-            required: "This field is Mandatory",
-            minlength: "Please enter a valid value",
-            lettersonly: "Only Alphabets Allowed"
-        },
-        trainingInternshipCertificate: {
-            required: "This field is Mandatory",
-            filesize: "Maximum file size is 1 MB"
-        }
-    },
-    highlight: function (element) {
-        $(element).parent().addClass('has-error');
-    },
-    unhighlight: function (element) {
-        $(element).parent().removeClass('has-error');
-    },
-    submitHandler: function (form) {
-        form.submit();
-    }
-});
-
+jQuery(function ($) {
 $('#coCurriculumForm').validate({
     rules: {
         status: {
@@ -393,7 +162,179 @@ $('#coCurriculumForm').validate({
     unhighlight: function (element) {
         $(element).parent().removeClass('has-error');
     },
+    
     submitHandler: function (form) {
-        form.submit();
-    }
+        form.validate();
+
+}
+});
+});
+
+jQuery(function ($) {
+$('#bTechMarkSheetForm').validate({
+    rules: {
+        semester: {
+            required: true
+        },
+        semesterPercentage: {
+            required: true,
+            maxlength: 3,
+            minlength: 1,
+            digitsonly: true
+        },
+        semesterMarksheet: {
+            required: true,
+            filesize: 1048576
+        },
+        bTechPercentage: {
+            minlength: 1,
+            maxlength: 3,
+            digitsonly: true
+        }
+    },
+    messages: {
+
+        semester: {
+            required: "This field is Mandatory"
+        },
+        semesterPercentage: {
+            required: "This field is Mandatory",
+            maxlength: "Enter a valid Percentage",
+            minlength: "This field is Mandatory",
+            digitsonly: "Enter a valid Percentage"
+        },
+        semesterMarksheet: {
+            required: "This field is Mandatory",
+            filesize: "Maximum file size is 1 MB"
+        },
+        bTechPercentage: {
+            minlength: "This field is Mandatory",
+            maxlength: "Enter a valid Percentage",
+            digitsonly: "Enter a valid Percentage"
+        }
+    },
+    highlight: function (element) {
+        $(element).parent().addClass('has-error');
+    },
+    unhighlight: function (element) {
+        $(element).parent().removeClass('has-error');
+    },
+                submitHandler: function (form) {
+                form.validate();
+                        }
+        });
+});
+         jQuery(function ($) {
+ $('#trainingAndInternshipForm').validate({
+    rules: {
+        rollNo: {
+            required: true,
+            minlength: 9,
+            digitsonly: true
+        },
+        studentName: {
+            required: true,
+            minlength: 2,
+            lettersonly: true
+        },
+        branch: {
+            required: true
+        },
+        year: {
+            required: true
+        },
+        projectTitle: {
+            required: true,
+            minlength: 3,
+            lettersonly: true
+        },
+        areaOfProject: {
+            required: true,
+            minlength: 3},
+        session: {
+            required: true,
+            digitsonly: true
+        },
+        companyName: {
+            required: true,
+            minlength: 3,
+            lettersonly: true
+        },
+        mentorName: {
+            required: true,
+            minlength: 3,
+            lettersonly: true
+        },
+        city: {
+            required: true,
+            minlength: 3,
+            lettersonly: true
+        },
+        trainingInternshipCertificate: {
+            required: true,
+            filesize: 1048576
+        }
+
+    },
+    messages: {
+
+        rollNo: {
+            required: "This field is Mandatory",
+            minlength: "Please enter a valid value",
+            digitsonly: "Only Numbers Allowed"
+        },
+        studentName: {
+            required: "This field is Mandatory",
+            minlength: "Please enter a valid value",
+            lettersonly: "Only Alphabets Allowed"
+        },
+        branch: {
+            required: "This field is Mandatory"
+        },
+        year: {
+            required: "This field is Mandatory"
+        },
+        projectTitle: {
+            required: "This field is Mandatory",
+            minlength: "Please enter a valid value",
+            lettersonly: "Only Alphabets Allowed"
+        },
+        areaOfProject: {
+            required: "This field is Mandatory",
+            minlength: "Please enter a valid value"
+        },
+        session: {
+            required: "This field is Mandatory"
+        },
+        companyName: {
+            required: "This field is Mandatory",
+            minlength: 3,
+            lettersonly: "Only Alphabets Allowed"
+        },
+        mentorName: {
+            required: "This field is Mandatory",
+            minlength: "Please enter a valid value",
+            lettersonly: "Only Alphabets Allowed"
+        },
+        city: {
+            required: "This field is Mandatory",
+            minlength: "Please enter a valid value",
+            lettersonly: "Only Alphabets Allowed"
+        },
+        trainingInternshipCertificate: {
+            required: "This field is Mandatory",
+            filesize: "Maximum file size is 1 MB"
+        }
+    },
+    highlight: function (element) {
+        $(element).parent().addClass('has-error');
+    },
+    unhighlight: function (element) {
+        $(element).parent().removeClass('has-error');
+    },
+ submitHandler: function (form) {
+        form.validate();
+
+}
+});
 });
